@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '@/views/Home.vue'
+import Home from '@/views/Home'
 
 Vue.use(VueRouter)
 
@@ -11,9 +11,9 @@ const routes = [
     component: Home
   },
   {
-    path: '/favoritos',
-    name: 'wishlist',
-    component: () => import('@/views/Wishlist.vue')
+    path: '/lista-de-desejos',
+    name: 'Wishlist',
+    component: () => import('@/views/Wishlist')
   }
 ]
 
