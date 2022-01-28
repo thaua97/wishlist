@@ -1,8 +1,11 @@
+import { moneyFormatter } from '@/services/formatter/currency'
+
 export default {
-  name: 'BaseItem',
+  name: 'MNItem',
   components: {
-    BaseBookmark: () => import('../BaseBookmark'),
+    'mn-bookmark': () => import('../MNBookmark'),
   },
+
   props: {
     product: {
       type: Object,
@@ -10,14 +13,15 @@ export default {
         return {
           title: 'teste',
           price: 0,
-          image: 'teste',
+          image: 'teste',  
         }
       },
     }
   },
   computed: {
     price () {
-      return this.product?.price;
+      return moneyFormatter(this.product?.price);
     },
-  },  
+  },
+
 };

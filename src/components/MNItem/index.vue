@@ -1,6 +1,9 @@
 <template>
   <article class="base-item">
-    <base-bookmark class="base-item__bookmark"/>
+    <mn-bookmark 
+      class="base-item__bookmark"
+      :item="product"
+    />
 
     <div class="base-item__container">
       <img 

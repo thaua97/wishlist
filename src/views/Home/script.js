@@ -4,19 +4,20 @@ import { mapGetters, mapActions } from 'vuex'
 export default {
   name: 'Home',
   components: {
-    BaseItem: () => import('@/components/BaseItem'),
+    'mn-item': () => import('@/components/MNItem'),
   },
   computed: {
     ...mapGetters([
-      'getProducts'
+      'getProducts',
+      'getWishlist'
     ]),
   },
-  created() {
-    this.fetchProducts()
+  created () {
+    this.fetchProducts();
   },
   methods: {
-    ...mapActions(['setProducts']),
-
+    ...mapActions(['setProducts', 'setWishlist']),
+  
     async fetchProducts () {
       const items = new api.Products();
 
@@ -24,10 +25,11 @@ export default {
         const {data: res} = await items.getProducts();
 
         this.setProducts(res.products);
+        
         console.log(this.getProducts);
       } catch (err) {
         console.error(err)
       }
-    }
+    },
   }
 };

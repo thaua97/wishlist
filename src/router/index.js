@@ -8,12 +8,23 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    component: Home
+    component: Home,
+    meta: {
+      breadcrumbs: [
+        { name: 'Home'},
+      ]
+    }
   },
   {
     path: '/lista-de-desejos',
     name: 'Wishlist',
-    component: () => import('@/views/Wishlist')
+    component: () => import('@/views/Wishlist'),
+    meta: {
+      breadcrumbs: [
+        { name: 'Home', link: 'Home'},
+        { name: 'Lista de desejos',},
+      ]
+    }
   }
 ]
 

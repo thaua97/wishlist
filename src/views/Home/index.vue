@@ -1,13 +1,14 @@
 <template>
   <main class="home-view">
     <section class="home-view__wrapper">
+      <!-- <mn-breadcrumbs /> -->
       <ul class="home-view__list">
         <li
           v-for="product in getProducts"
           :key="product.id"
           class="home-view__list--item"
         >
-          <base-item :product.sync="product"></base-item>
+          <mn-item :product="product"></mn-item>
         </li>
       </ul>
     </section>

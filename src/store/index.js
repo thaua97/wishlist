@@ -5,9 +5,9 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+    wishlist: [...JSON.parse(localStorage.getItem('@wishlist'))],
     products: [],
     product: {},
-    wishlist: [],
   },
 
   getters: {

@@ -1,14 +1,16 @@
 <template>
   <div id="app">
-    <base-toolbar/>
-    <router-view/>
+    <main-layout>
+      <router-view></router-view>
+    </main-layout>
   </div>
 </template>
 <script>
+
 export default {
   name: 'app',
   components: {
-    BaseToolbar: () => import('@/components/BaseToolbar')
-  }
+    MainLayout: () => import('@/layouts/MainLayout'),
+  },
 }
 </script>
