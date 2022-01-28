@@ -1,9 +1,12 @@
 <template>
-  <ul class="breadcrumbs">
+  <ul class="mn-breadcrumbs">
     <li 
       v-for="(breadcrumb, index) in  breadcrumbsList"
       :key="index"
-      class="breadcrumbs__item"
+      :class="[
+        'mn-breadcrumbs__item',
+        {'mn-breadcrumbs__item--linked':breadcrumb.link }
+      ]"
       @click="navegateTo(index)"
     >
       {{ breadcrumb.name }}
@@ -12,5 +15,7 @@
 
 </template>
 
-<script src="./script.js">
-<styles src="./styles.scss" lang="scss" />
+<script src="./script.js"></script>
+
+<style src="./styles.scss" lang="scss" />
+

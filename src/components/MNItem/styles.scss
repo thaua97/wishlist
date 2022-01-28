@@ -1,6 +1,6 @@
 @import '@/styles/index.scss';
 
-.base-item {
+.mn-item {
   position: relative;
   width: 100%;
   max-width: 12.5rem;
@@ -14,7 +14,9 @@
     align-items: center;
     justify-content: center;
     width: 100%;
+    padding: $space;
   }
+
   &__image {
     width: 100px;
   }

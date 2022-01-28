@@ -4,7 +4,7 @@ const API_URL= "https://run.mocky.io/v3/"
 
 export default class Products extends Config {
   constructor() {
-    super(API_URL);
+    super('axios', API_URL);
   }
 
   getProducts() {

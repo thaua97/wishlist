@@ -1,6 +1,6 @@
 <template>
     <span 
-      class="base-bookmark"
+      class="mn-bookmark"
       @click="toogleWishlist(item)"
     >
       <heart :fill-color.sync="isChecked" />

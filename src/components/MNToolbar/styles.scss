@@ -1,6 +1,6 @@
 @import '@/styles/index.scss';
 
-.base-toolbar {
+.mn-toolbar {
   width: 100%;
   background-color: $primary;
   display: flex;
@@ -48,7 +48,7 @@
   }
 
   &__search {
-    width: 80%;
+    width: 75%;
     padding: $space;
   } 
 }

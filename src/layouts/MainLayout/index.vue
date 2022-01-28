@@ -1,9 +1,9 @@
 <template>
-  <span>
+  <div class="mn-main-template">
     <mn-toolbar />
     <mn-breadcrumbs />
     <slot />
-  </span>
+  </div>
 </template>
 
 <script>

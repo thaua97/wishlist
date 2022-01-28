@@ -1,18 +1,18 @@
 <template>
-  <article class="base-item">
+  <article class="mn-item">
     <mn-bookmark 
-      class="base-item__bookmark"
+      class="mn-item__bookmark"
       :item="product"
     />
 
-    <div class="base-item__container">
+    <div class="mn-item__container">
       <img 
-        class="base-item__image"
+        class="mn-item__image"
         :src="product.image" 
         :alt="product.title"
       />
-      <h4 class="base-item__title">{{ product.title }}</h4>
-      <p class="base-item__title--price">{{ price }}</p>
+      <h4 class="mn-item__title">{{ product.title }}</h4>
+      <p class="mn-item__title--price">{{ price }}</p>
     </div>
   </article>
 </template>
