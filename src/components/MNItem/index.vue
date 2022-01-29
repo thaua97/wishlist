@@ -1,12 +1,18 @@
 <template>
   <article class="mn-item">
     <mn-bookmark 
+      v-if="$route.name === 'Home'"
       class="mn-item__bookmark"
-      :item="product"
+      :item.sync="product"
+    />
+
+    <mn-remove-bookmark
+      v-if="$route.name === 'Wishlist'"
+      :product-id="product.id"
     />
 
     <div class="mn-item__container">
-      <img 
+      <img
         class="mn-item__image"
         :src="product.image" 
         :alt="product.title"

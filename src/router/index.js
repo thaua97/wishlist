@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '@/views/Home'
+// import Home from '@/views/Home'
+import Products from '@/views/Products'
+
 
 Vue.use(VueRouter)
 
@@ -8,7 +10,7 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    component: Home,
+    component: Products,
     meta: {
       breadcrumbs: [
         { name: 'Home'},
@@ -18,7 +20,7 @@ const routes = [
   {
     path: '/lista-de-desejos',
     name: 'Wishlist',
-    component: () => import('@/views/Wishlist'),
+    component: Products,
     meta: {
       breadcrumbs: [
         { name: 'Home', link: 'Home'},

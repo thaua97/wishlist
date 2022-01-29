@@ -25,8 +25,6 @@ export default {
 
       try {
         const {data: res} = await geo.getCity(position.coords.latitude, position.coords.longitude);
-        
-        console.log(position.coords.latitude, position.coords.longitude);
 
         const cityInfo = res.plus_code.compound_code;
 

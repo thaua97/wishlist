@@ -4,16 +4,20 @@ import { mapGetters, mapActions } from 'vuex'
 export default {
   name: 'Home',
   components: {
-    'mn-item': () => import('@/components/MNItem'),
+    'mn-list': () => import('@/components/MNList'),
   },
   computed: {
     ...mapGetters([
       'getProducts',
       'getWishlist'
     ]),
+    items () {
+      return this.$route.name === 'Home' ? this.getProducts : this.getWishlist;
+    }
   },
   created () {
     this.fetchProducts();
+    this.fetchWishlist();
   },
   methods: {
     ...mapActions(['setProducts', 'setWishlist']),
@@ -25,11 +29,17 @@ export default {
         const {data: res} = await items.getProducts();
 
         this.setProducts(res.products);
-        
-        console.log(this.getProducts);
       } catch (err) {
         console.error(err)
       }
     },
+
+    fetchWishlist () {
+      if(localStorage.getItem('@wishlist') !== null) {
+        this.setWishlist(JSON.parse(localStorage.getItem('@wishlist')));
+      } else {
+        localStorage.setItem('@wishlist', JSON.stringify([])); 
+      }
+    }
   }
 };

@@ -28,24 +28,23 @@ export default {
     ...mapActions(['setWishlist']),
 
     async toogleWishlist(item) {
-      if(this.checked) {
-        const wishlist = this.getWishlist;
+      const wishlist = this.getWishlist;
 
+      if(this.checked) {
         const filterItem = wishlist.filter(prod => item.id !== prod.id);
 
-        await localStorage.setItem('@wishlist', JSON.stringify(filterItem));   
+        await this.setWishlist(filterItem);
 
-        this.setWishlist(filterItem);
+        localStorage.setItem('@wishlist', JSON.stringify(filterItem));  
         this.checked = !this.checked;
 
       } else {
-        const actualWishlist = this.getWishlist.push(item);
-
-        this.setWishlist(actualWishlist);
+        const newWishlist = [...wishlist, item];
+       
+        await this.setWishlist(newWishlist);
 
         localStorage.setItem('@wishlist', JSON.stringify(this.getWishlist));      
 
-        console.log('add:', this.getWishlist);
         this.checked = !this.checked;
       }
     },

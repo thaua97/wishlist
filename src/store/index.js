@@ -5,7 +5,7 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    wishlist: [...JSON.parse(localStorage.getItem('@wishlist'))],
+    wishlist: [],
     products: [],
     product: {},
     location: {
@@ -24,7 +24,7 @@ export default new Vuex.Store({
 
   mutations: {
     SET_WISHLIST: (localState, payload) => {
-      localState.wishlit = payload;
+      localState.wishlist = payload;
     },
     SET_PRODUCTS: (localState, payload) => {
       localState.products = payload;

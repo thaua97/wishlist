@@ -8,6 +8,7 @@ import Heart from 'vue-material-design-icons/Heart.vue';
 import HeartOutline from 'vue-material-design-icons/HeartOutline.vue';
 import Phone from 'vue-material-design-icons/Phone.vue';
 import MapMarker from 'vue-material-design-icons/MapMarker.vue';
+import CloseCircleOutline from 'vue-material-design-icons/CloseCircleOutline.vue';
 
 Vue.config.productionTip = false
 
@@ -15,6 +16,7 @@ Vue.component('heart', Heart);
 Vue.component('heart-outline', HeartOutline);
 Vue.component('phone-icon', Phone);
 Vue.component('map-marker', MapMarker);
+Vue.component('close-circle-outline', CloseCircleOutline);
 
 new Vue({
   styles,

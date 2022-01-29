@@ -4,6 +4,7 @@ export default {
   name: 'MNItem',
   components: {
     'mn-bookmark': () => import('../MNBookmark'),
+    'mn-remove-bookmark': () => import('../MNRemoveBookmark'),
   },
 
   props: {
