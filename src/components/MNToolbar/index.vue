@@ -1,29 +1,72 @@
 <template>
-  <header class="mn-toolbar">
-    <div class="mn-toolbar__content">
-      <nav class="mn-toolbar__nav">
+  <div>
+    <header class="mn-toolbar">
+      <div class="mn-toolbar__content">
+        <nav class="mn-toolbar__nav">
+          <router-link 
+            :to="{name: 'Home'}" 
+            class="mn-toolbar__nav--title"
+          >
+            MagaNets
+          </router-link>
+          <a class="mn-toolbar__nav--item">
+            <map-marker />&nbsp; Cidade: {{city}}
+          </a>
+          <a class="mn-toolbar__nav--item">
+            <phone-icon />&nbsp; Central de atendimento
+          </a>
+          <router-link 
+            class="mn-toolbar__nav--item" 
+            :to="{name: 'Wishlist'}"
+          >
+            <heart />&nbsp; Lista de desejos 
+          </router-link>
+        </nav>
+        <input class="mn-toolbar__search" type="sarch" name="" id="">
+      </div>
+    </header>
+
+    <header class="mn-toolbar-responsive">
+      <div class="mn-toolbar-responsive__navegate">
         <router-link 
           :to="{name: 'Home'}" 
-          class="mn-toolbar__nav--title"
-        >
-          MagaNets
-        </router-link>
-        <p class="mn-toolbar__nav--item">
-          <map-marker />&nbsp; Cidade: {{city}}
-        </p>
-        <p class="mn-toolbar__nav--item">
-          <phone-icon />&nbsp; Central de atendimento
-        </p>
+          class="mn-toolbar-responsive__navegate--title"
+        >MagaNets</router-link>
+        
+        <menu-icon
+          :size="42"
+          @click="toogleMenu"
+        />
+      </div>
+
+      <nav 
+        :class="[
+          'mn-toolbar-responsive__nav',
+          {'mn-toolbar-responsive__nav--active': open}
+        ]"
+      >
         <router-link 
-          class="mn-toolbar__nav--item" 
-          :to="{name: 'Wishlist'}"
-        >
-          <heart />&nbsp; Lista de desejos 
-        </router-link>
+            class="mn-toolbar-responsive__nav--item" 
+            :to="{name: 'Wishlist'}"
+          >
+            <heart />&nbsp; Lista de desejos 
+          </router-link>
+          <router-link 
+            class="mn-toolbar-responsive__nav--item" 
+            :to="{name: 'Wishlist'}"
+          >
+            <heart />&nbsp; Lista de desejos 
+          </router-link>
+          <router-link 
+            class="mn-toolbar-responsive__nav--item" 
+            :to="{name: 'Wishlist'}"
+          >
+            <heart />&nbsp; Lista de desejos 
+          </router-link>
       </nav>
-      <input class="mn-toolbar__search" type="sarch" name="" id="">
-    </div>
-  </header>
+    </header>
+
+  </div>
 </template>
 
 <script src="./script.js"></script>

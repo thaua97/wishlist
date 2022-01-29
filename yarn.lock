@@ -9900,6 +9900,11 @@ vue-loader@^15.9.2:
     vue-hot-reload-api "^2.3.0"
     vue-style-loader "^4.1.0"
 
+vue-loading-overlay@^3.0:
+  version "3.4.2"
+  resolved "https://registry.yarnpkg.com/vue-loading-overlay/-/vue-loading-overlay-3.4.2.tgz#34792a83218df1d35dff50121ce9fac2114f1c38"
+  integrity sha512-xcB+NPjl76eA0uggm707x3ZFgrNosZXpynHipyS3K+rrK1NztOV49R1LY+/4ij5W1KYANp7eRI2EIHrxCpmWAw==
+
 vue-material-design-icons@^5.0.0:
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/vue-material-design-icons/-/vue-material-design-icons-5.0.0.tgz#146275a05adfbd7508baf7a19b68bad77aea557c"
@@ -9930,6 +9935,11 @@ vue-template-es2015-compiler@^1.6.0, vue-template-es2015-compiler@^1.9.0:
   version "1.9.1"
   resolved "https://registry.yarnpkg.com/vue-template-es2015-compiler/-/vue-template-es2015-compiler-1.9.1.tgz#1ee3bc9a16ecbf5118be334bb15f9c46f82f5825"
   integrity sha512-4gDntzrifFnCEvyoO8PqyJDmguXgVPxKiIxrBKjIowvL9l+N66196+72XVYR8BBf1Uv1Fgt3bGevJ+sEmxfZzw==
+
+vue-toast-notification@^0.6:
+  version "0.6.2"
+  resolved "https://registry.yarnpkg.com/vue-toast-notification/-/vue-toast-notification-0.6.2.tgz#44bb164505c310f6a721ff96921761b006ebb5cc"
+  integrity sha512-fIsgALA3yQAtTnZjyUg5Y1tbVrYkLNBCET/ZvvDTS7tnmaWz8L1IzkESrRs1KIiqIGRVbBbiZAzUImrVBEziDA==
 
 vue@^2.6.11:
   version "2.6.14"

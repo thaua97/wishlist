@@ -20,8 +20,10 @@ export default {
       const filterItem = wishlist.filter(item => id !== item.id);
 
       await this.setWishlist(filterItem);
-      
+
       localStorage.setItem('@wishlist', JSON.stringify(filterItem));
+
+      this.$toast.success('Produto removido da sua lista de desejos!');
     }
   }
 }

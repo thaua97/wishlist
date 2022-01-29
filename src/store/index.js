@@ -9,7 +9,7 @@ export default new Vuex.Store({
     products: [],
     product: {},
     location: {
-      city: 'sem localização',
+      city: 'Sem localização',
       lat: 0, 
       lng: 0,
     },

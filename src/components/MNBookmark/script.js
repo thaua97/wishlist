@@ -37,6 +37,7 @@ export default {
 
         localStorage.setItem('@wishlist', JSON.stringify(filterItem));  
         this.checked = !this.checked;
+        this.$toast.success('Produto removido da sua lista de desejos!');
 
       } else {
         const newWishlist = [...wishlist, item];
@@ -46,6 +47,8 @@ export default {
         localStorage.setItem('@wishlist', JSON.stringify(this.getWishlist));      
 
         this.checked = !this.checked;
+
+        this.$toast.success(`🎉 ${item.title} agora esta na sua lista de desejos!`);
       }
     },
 

@@ -1,7 +1,8 @@
 <template>
   <main class="home-view">
     <section class="home-view__wrapper">
-      <mn-list  
+      <mn-list
+        ref="list"
         :products.sync="items"
       />
     </section>

@@ -3,6 +3,11 @@ import { mapGetters, mapActions, } from 'vuex';
 
 export default {
   name: 'MNToolbar',
+  data () {
+    return {
+      open: false,
+    };
+  },
   computed: {
     ...mapGetters(['getLocation']),
     city () {
@@ -17,6 +22,8 @@ export default {
     getGeolocate() {
       if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(this.getPosition);
+      } else {
+        this.$toast.error('☹️ Seu navegador não suporta geolocalização');
       }
     },
 
@@ -36,8 +43,12 @@ export default {
           lng: position.coords.longitude
         })
       } catch (error) {
+        this.$toast.error('☹️ Não foi possivel achar sua localização!');
         console.error(error);
       }
+    },
+    toogleMenu () {
+      this.open = !this.open;
     }
   }
 }
