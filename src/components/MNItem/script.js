@@ -1,4 +1,4 @@
-import { moneyFormatter } from '@/services/formatter/currency'
+import { moneyFormatter } from '@/services/formatter/currency';
 
 export default {
   name: 'MNItem',
@@ -10,13 +10,7 @@ export default {
   props: {
     product: {
       type: Object,
-      default: () => {
-        return {
-          title: 'teste',
-          price: 0,
-          image: 'teste',  
-        }
-      },
+      default: () => {},
     }
   },
   computed: {
@@ -24,5 +18,4 @@ export default {
       return moneyFormatter(this.product?.price);
     },
   },
-
 };

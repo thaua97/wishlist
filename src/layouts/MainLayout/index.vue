@@ -6,16 +6,6 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'MainLayout',
-  components: {
-    'mn-toolbar': () => import('@/components/MNToolbar'),
-    'mn-breadcrumbs': () => import('@/components/MNBreadcrumbs'),
-  },
-}
-</script>
+<script src="./script.js"></script>
 
-<style>
-
-</style>
+<style src="./styles.scss" lang="scss" />

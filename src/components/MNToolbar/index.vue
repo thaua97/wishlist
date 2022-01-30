@@ -10,7 +10,7 @@
             MagaNets
           </router-link>
           <a class="mn-toolbar__nav--item">
-            <map-marker />&nbsp; Cidade: {{city}}
+            <map-marker />&nbsp;<span id="location"> Cidade: {{city}}</span>
           </a>
           <a class="mn-toolbar__nav--item">
             <phone-icon />&nbsp; Central de atendimento
@@ -22,7 +22,7 @@
             <heart />&nbsp; Lista de desejos 
           </router-link>
         </nav>
-        <input class="mn-toolbar__search" type="sarch" name="" id="">
+        <input class="mn-toolbar__search" type="sarch" name="">
       </div>
     </header>
 
@@ -45,24 +45,18 @@
           {'mn-toolbar-responsive__nav--active': open}
         ]"
       >
+        <a class="mn-toolbar-responsive__nav--item">
+          <map-marker />&nbsp; Cidade: {{city}}
+        </a>
+        <a class="mn-toolbar-responsive__nav--item">
+          <phone-icon />&nbsp; Central de atendimento
+        </a>
         <router-link 
-            class="mn-toolbar-responsive__nav--item" 
-            :to="{name: 'Wishlist'}"
-          >
-            <heart />&nbsp; Lista de desejos 
-          </router-link>
-          <router-link 
-            class="mn-toolbar-responsive__nav--item" 
-            :to="{name: 'Wishlist'}"
-          >
-            <heart />&nbsp; Lista de desejos 
-          </router-link>
-          <router-link 
-            class="mn-toolbar-responsive__nav--item" 
-            :to="{name: 'Wishlist'}"
-          >
-            <heart />&nbsp; Lista de desejos 
-          </router-link>
+          class="mn-toolbar-responsive__nav--item" 
+          :to="{name: 'Wishlist'}"
+        >
+          <heart />&nbsp; Lista de desejos 
+        </router-link>
       </nav>
     </header>
 

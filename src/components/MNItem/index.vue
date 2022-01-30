@@ -3,7 +3,7 @@
     <mn-bookmark 
       v-if="$route.name === 'Home'"
       class="mn-item__bookmark"
-      :item.sync="product"
+      :item-id.sync="product.id"
     />
 
     <mn-remove-bookmark
@@ -18,7 +18,12 @@
         :alt="product.title"
       />
       <h4 class="mn-item__title">{{ product.title }}</h4>
-      <p class="mn-item__title--price">{{ price }}</p>
+      <p class="mn-item__title--price">{{`${price}`}}</p>
+      <router-link
+        class="mn-item__button"
+        :to="{name: 'Product',  params: { sku: product.sku }}">
+        <eye-icon />&nbsp; Ver detalhes
+      </router-link>
     </div>
   </article>
 </template>

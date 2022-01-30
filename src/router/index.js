@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 // import Home from '@/views/Home'
 import Products from '@/views/Products'
+import Product from '@/views/Product'
 
 
 Vue.use(VueRouter)
@@ -25,6 +26,17 @@ const routes = [
       breadcrumbs: [
         { name: 'Home', link: 'Home'},
         { name: 'Lista de desejos',},
+      ]
+    }
+  },
+  {
+    path: '/produto/:sku',
+    name: 'Product',
+    component: Product,
+    meta: {
+      breadcrumbs: [
+        { name: 'Home', link: 'Home'},
+        { name: 'produto',},
       ]
     }
   }
